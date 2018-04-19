@@ -1,12 +1,18 @@
-<div class="wrapper">
-    <h3 class='wrapper padding-top-30'>Write an article.</h3>
-    <form class='wrapper padding-top-30'>
-        <input type="text" name="title" placeholder="Article Title" size='50' #newtitle><br><br>
+<div class="content">
+    <div class="wrapper">
+        <h3 class='wrapper padding-top-30'>Write an article.</h3>
+        <form class='wrapper padding-top-30'>
+            <input type="text" name="title" placeholder="Article Title" size='50' #newtitle><br><br>
 
-        <input type="text" name="author" placeholder="Article Author" size='50' #newauthor><br><br>
+            <input type="text" name="author" placeholder="Article Author" size='50' #newauthor><br><br>
 
-        <textarea name="content" placeholder='Article Content' rows="4" cols="80" #newtext></textarea><br>
+            <textarea name="content" placeholder='Article Content' rows="4" cols="80" #newtext></textarea><br>
 
-        <button type="button" (click)='addArticle(newtitle, newauthor, newtext)'>Submit article</button>
-    </form>
+            <button type="button" (click)='addArticle(newtitle, newauthor, newtext)'>Submit article</button>
+        </form>
+    </div>
+
+    <div class="all-cards wrapper flex flex-wrap">
+        <app-article *ngFor='let article of sortedArticles()' [article]='article'></app-article>
+    </div>
 </div>

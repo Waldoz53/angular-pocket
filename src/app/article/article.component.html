@@ -1,3 +1,11 @@
-<p>
-  article works!
-</p>
+<div class="cards wrapper margin-top-30">
+    <img src="https://picsum.photos/360/175?random" alt="">
+    <p>{{ article.author }}</p>
+    <h3>{{ article.title }}</h3>
+    <p class='no-padding margin-top-m-30'>{{ article.content }}</p>
+
+    <div class="">
+        <p class=''><a href='' (click)='saveArticle()' class='save'>Save!</a></p>
+        <p class='float-right'>{{ article.saves }} saves</p>
+    </div>
+</div>
